@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.1",
 	"appid": "wx8e887fc76f7a4667",
-	"projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%88%E6%9D%83",
+	"projectname": "navigation",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

@@ -58,9 +58,6 @@ Page({
     wx.navigateToMiniProgram({
       appId: 'wxbbec65de8931cc38', // 要跳转的小程序的appid
       path: 'pages/index/index', // 跳转的目标页面
-      extarData: {
-        open: 'auth'
-      },
       success(res) {
         // 打开成功  
       }
