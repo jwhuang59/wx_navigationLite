@@ -1,0 +1,18 @@
+/* pages/admin/admin.wxss */
+
+.container{width:100%;height:100%;}
+.header{width:100%;height:120px;margin:0 auto;background:#eee;}
+.header .adminImg{width:60px;height:60px;margin:20px auto 10px;border-radius:50%;display: block;overflow: hidden;}
+.header .adminName{height:30px;line-height:30px;text-align:center;font-size:16px;color:#333;display:block;}
+.wrapper{position: absolute;top:120px;left:0;right:0;bottom:0;background:#eee;}
+.wrapper .title{height:40px;line-height:46px;font-size:15px;color:#999;padding:0 10px;display: block;background:#eee;}
+.wrapper .lis{height:50px;line-height:50px;padding:0 10px;border-bottom:1px solid #eee;background:#fff;text-align:left;}
+.wrapper .lis label{color:#333;font-size:16px;}
+.wrapper .lis text{font-size:14px;color:#aaa;margin-left:12px;}
+
+.wrapper button::after{border:none;}
+.button-hover{background:#dedede !important;}
+
+
+
+

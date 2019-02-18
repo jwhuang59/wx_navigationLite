@@ -1,0 +1,10 @@
+/* pages/collect/collect.wxss */
+
+.container{width:100%;padding:0 20px;margin-top:20px;display:block;text-align:left;}
+.container .title{font-size:18px;color:#333;font-weight:bold;}
+.container .step{margin-top:15px;}
+.container .step text{font-size:16px;color:#666;}
+.container .step image{width:100%;margin:15px 0}
+.container .other{margin:10px 0 30px;}
+.container .other text{font-size:15px;color:#666;display:block;}
+

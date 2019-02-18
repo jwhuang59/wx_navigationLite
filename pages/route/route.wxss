@@ -1,0 +1,57 @@
+/* pages/route/route.wxss */
+
+.container .route-head{width:100%;height:50px;display:flex;background:#4188fe;}
+.container .route-head button{width:200px;height:30px;line-height:30px;background:#699efe;border:none;margin:9px 0;color:#eee;font-size:14px;text-align:left;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;padding-left:10px;}
+.container .route-head image{width:30px;height:30px;margin:10px auto;}
+.container .route-head .start{float:left;margin-left:15px;}
+.container .route-head .end{float:right;margin-right:15px;}
+
+.flex-select{width:100%;height:40px;display: flex;background:#4188fe;}
+.flex-item{height: 36px; line-height: 36px;text-align: center;color:#dfdfdf;font-size:14px;flex: 1}
+.flex-item.active{color:#fff;border-bottom:2px solid #fff;}
+
+
+.map_box{position:absolute;top: 90px;bottom: 80px;left: 0px;right: 0px;}
+.route_box{position:absolute;height: 80px;bottom: 0px;left: 0px;right: 0px;}
+.route_box{padding:10px;box-sizing:border-box;flex:1}
+.route_box .box-top text{font-size:16px;color:#333;margin-right:8px;font-weight:bold;}
+.route_box .box-bottom text{font-size:14px;color:#666;margin-right:8px;}
+.route_box .box-bottom .good{color:#5fc095;font-size:15px;border-right:1px solid #ccc;padding-right:10px;}
+
+.toDetail{height:30px;line-height:30px;font-size:16px;position:absolute;bottom: 20px;right: 10px;padding:5px 10px;color: #fff;background: #0091ff;text-align:center;border-radius:5px;}
+
+
+
+.busroute{width:100%;}
+.busroute .route-select{width:100%;height:50px;border-bottom:8px solid #eee;flex:1;}
+.busroute .date{width:50%;height:50px;float:left;text-align:center;}
+
+.busroute .date text{line-height:50px;font-size:16px;color:#333;}
+
+.busroute .date text:after{content:'';display: inline-block;  width: 6px;  height: 6px;  border-right: 2px solid #999;  border-top: 2px solid #999;  -webkit-transform: rotate(135deg); transform: rotate(135deg);  cursor:pointer;margin:-3px 0 0 8px;vertical-align: middle;}
+
+.busroute .recommend{width:50%;height:50px;float:right;text-align:center;}
+
+.busroute .recommend text{line-height:50px;font-size:16px;color:#333;}
+
+.busroute .recommend text:after{content:'';display: inline-block;  width: 6px;  height: 6px;  border-right: 2px solid #999;  border-top: 2px solid #999;  -webkit-transform: rotate(135deg); transform: rotate(135deg);  cursor:pointer;margin:-3px 0 0 8px;vertical-align: middle;}
+
+
+.busplan .busplan-lis{padding:10px 0;overflow:auto;border-bottom:1px solid #eee}
+.busplan-lis .lis-left{width:30%;display:flex;flex-direction: column;text-align:right;padding-right:10px;float:left;padding:0 10px;box-sizing: border-box;}
+.busplan-lis .lis-left text{margin:2px 0;font-size:13px;color:#333}
+.busplan-lis .lis-left .good text{width:30px;padding:1px 2px;background:#5fc095;color:#fff;float:right;text-align:center;border-radius: 2px;}
+
+.busplan-lis .lis-right{width:70%;padding-left:10px;float:right;padding:0 10px;box-sizing: border-box;border-left:1px solid #ccc;}
+.busplan-lis .lis-right .routeline{line-height:20px;}
+.busplan-lis .lis-right .routeline text{height:24px;line-height:24px;font-size:15px;color:#333;background:#ccc;padding:0 5px;font-weight:bold;border-radius:3px;vertical-align: top;display:inline-block;margin-top:3px;}
+
+.busplan-lis .lis-right .routeline .line-over{display:inline-block;}
+
+.busplan-lis .lis-right .routeline image{width:14px;height:14px;margin:8px 5px;}
+.busplan-lis .lis-right .routeother{height:24px;line-height:24px;margin-top:5px;}
+.busplan-lis .lis-right .routeother text{font-size:13px;color:#333;vertical-align: middle;}
+
+
+.noBusRoute{font-size:16px;color:#666;margin-top:20px;text-align:center;}
+

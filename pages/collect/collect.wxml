@@ -1,0 +1,17 @@
+<!--pages/collect/collect.wxml-->
+<view class="container">
+  <text class="title">如何收藏导航lite？</text>
+  <view class="step">
+    <text>1.点击右上方“虚线点”</text>
+    <image src="../../image/step1.jpg"></image>
+  </view>
+  <view class="step">
+    <text>2.点击下方“添加到我的小程序”</text>
+    <image src="../../image/step2.jpg"></image>
+  </view>
+  <view class="other">
+    <text>如有问题，请联系我</text>
+    <text>微信：17521071571</text>
+    <text>邮箱：mr_huang509@163.com</text>
+  </view>
+</view>

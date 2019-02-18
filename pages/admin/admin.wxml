@@ -1,0 +1,58 @@
+<!--pages/admin/admin.wxml-->
+<view class="container">
+  <view class="header">
+    <open-data type="userAvatarUrl" class="adminImg"></open-data>
+    <open-data type="userNickName" class="adminName"></open-data>
+  </view>
+  <view class="wrapper">
+    <text class="title">设置</text>
+
+    <button class="lis" open-type="openSetting">
+      <label>授权设置</label>
+      <text>允许使用地理位置</text>
+    </button>
+    
+    <view class="lis" bindtap='clearStorage'>
+      <label>清除缓存</label>
+    </view>
+
+    <text class="title">操作</text>
+
+    <button open-type="share" class="lis">
+      <label>分享</label>
+      <text>分享给微信好友</text>
+    </button>
+
+    <view class="lis" bindtap="toCollect">
+      <label>收藏</label>
+      <text>添加到我的小程序</text>
+    </view>
+
+    <view class="lis" bindtap='previewImage'>
+      <label>捐助开发者</label>
+    </view>
+    
+    <button class="lis" open-type="contact">
+      <label>客服</label>
+      <text>查看使用指南</text>
+    </button>
+
+    <button class="lis" open-type="feedback">
+      <label>意见反馈</label>
+    </button>
+
+    <text class="title">小程序推荐</text>
+
+    <button class="lis" bindtap='otherWxApp'>
+      <label>戏子博客</label>
+      <text>个人博客小程序</text>
+    </button>
+  </view>
+</view>
+
+
+
+
+
+
+

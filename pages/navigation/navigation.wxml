@@ -1,0 +1,88 @@
+<!--pages/navigation/navigation.wxml-->
+
+<view class="container">
+  <view class="flex">
+    <view class="content">
+      <view class="flex-wrapper">
+        <image src="../../image/exchange.png" class="changePoint {{ hasanimate }}" bindtap="changePoint"></image>
+        <view class="goTo">
+          <view class="go">
+            <label>从</label>
+            <button bindtap='chooseStartPoint' wx:if="{{ startPointBean == false }}">输入起点</button>
+            <button bindtap='chooseStartPoint' wx:if="{{ startPointBean == true }}">{{changeData.startName}}</button>
+          </view>
+          <view class="to">
+            <label>到</label>
+            <button bindtap='chooseEndPoint' wx:if="{{ endPointBean == false }}">输入终点</button>
+            <button bindtap='chooseEndPoint' wx:if="{{ endPointBean == true }}">{{changeData.endName}}</button>
+          </view>
+        </view>
+        <image src="../../image/submit.png" class="submit" bindtap='goTo'></image>
+
+      </view>
+
+      <view class="flex-menu">
+        <view wx:for="{{toolData}}" wx:key="index" class="flex-item {{index == _num ? 'active' : ''}}" data-num="{{index}}" bindtap="changetool">{{toolData[index]}}</view>
+      </view>
+
+      <view class="flex-setUp">
+        <view class="setUp-item">
+          <image src="../../image/home.png"></image>
+          <view class="home item" bindtap="setupHome">
+            <label>家</label>
+            <text>{{homePart.homeText}}</text>
+          </view>
+        </view>
+
+        <view class="setUp-item">
+          <image src="../../image/company.png"></image>
+          <view class="company item" bindtap="setupCompany">
+            <label>公司</label>
+            <text>{{companyPart.companyText}}</text>
+          </view>
+        </view>
+      </view>
+
+      <button open-type='share' class="share" >
+        <image src="../../image/share.png"></image>
+        <label>分享</label>
+        <text>把导航lite分享给好友</text>
+      </button>
+
+      <view wx:if="{{ hasHistory != '' }}" class="history-wrapper">
+        <view class="hasHistory"  wx:for="{{historyRoute}}" wx:key="{{index}}" wx:for-item="item">
+          <navigator  hover-class="none" url="../route/route?startName={{historyRoute[index].startName}}&startPoint={{historyRoute[index].startPoint}}&endName={{historyRoute[index].endName}}&endPoint={{historyRoute[index].endPoint}}&ways={{historyRoute[index].ways}}">
+            <view class="history-place" >
+              <image src="../../image/lishi.png" class="before-icon"></image>
+              <view class="placeName">
+                <text>{{historyRoute[index].startName}}</text>
+                <image src="../../image/arrow0.png"></image>
+                <text>{{historyRoute[index].endName}}</text>
+              </view>
+              <image src="../../image/route{{historyRoute[index].ways}}.png" class="icon-route"></image>
+
+            </view>
+          </navigator>
+
+        </view>
+        <view class="empty-history" bindtap='emptyHistory'>
+          清空历史纪录
+        </view>
+      </view>
+      
+      <view class="noHistory" wx:else>
+        <image src="../../image/gantan.png"></image>
+        <text>无历史纪录</text>
+      </view>
+      <view class="tips">数据来源，高德地图开放平台，腾讯地图开放平台</view>
+
+    </view>
+  </view>
+
+</view>
+
+
+
+
+
+

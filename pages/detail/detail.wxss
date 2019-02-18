@@ -1,0 +1,67 @@
+/* pages/detail/detail.wxss */
+
+.container{width:100%;display:flex;}
+
+.place{width:100%;background:#4188fe;padding:10px 15px;box-sizing: border-box;text-align:center;}
+.place .place-sec{height:30px;line-height:30px;}
+.place .place-sec text{font-size:14px;color:#fff;}
+.place .place-sec .origin{width:150px;float:left;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;text-align:left;}
+.place .place-sec image{width:20px;height:20px;margin:5px auto;display:inline-block;}
+.place .place-sec .destination{width:150px;float:right;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;text-align:right}
+.place .place-row{height:30px;line-height:30px;text-align:right;}
+.place .place-row text{font-size:15px;color:#fff;}
+
+.detail{width:100%;padding:10px 20px;box-sizing: border-box;}
+.detail .lis-start{margin-left:20px;position:relative;border-bottom:1px solid #ddd;}
+.detail .lis-start:after{content:"";width:2px;height:16px;background:#ccc;position:absolute;left:-21px;bottom:-1px;}
+.detail .lis-start text{margin:15px 0;font-size:15px;color:#333}
+.detail .lis-start image{width:20px;height:20px;position:absolute;left:-30px;top:50%;transform: translate(0,-50%);}
+.detail .lis-start .start-origin{width:70%;float:left;}
+.detail .lis-start .start-case{width:30%;float:right;text-align:right;color:#0091ff}
+.detail .lis-start .clear{clear:both;}
+
+
+.detail .lis-end{height:50px;margin-left:20px;position:relative;}
+.detail .lis-end:after{content:"";width:2px;height:16px;background:#ccc;position:absolute;left:-21px;top:-1px;}
+.detail .lis-end text{margin:15px 0;font-size:15px;color:#333}
+.detail .lis-end image{width:20px;height:20px;position:absolute;left:-30px;top:50%;transform: translate(0,-50%);}
+.detail .lis-end .end-origin{float:left;}
+.detail .lis-end .end-case{float:right;text-align:right;color:#0091ff}
+
+
+.detail .detail-lis{margin-left:20px;position:relative;}
+.detail .detail-lis:before{content:"";width:2px;height:100%;background:#ccc;position:absolute;left:-21px;top:0}
+.detail .detail-lis:after{content:"";width:14px;height:14px;border-radius: 8px;background:#eee;border:1px solid #bbb;position:absolute;left:-28px;top:50%;transform: translate(0,-50%);}
+.detail .detail-lis .detail-load{padding-top:10px;}
+.detail .detail-lis .detail-load text:nth-child(1){font-size:15px;font-weight:bold;color:#333}
+.detail .detail-lis .detail-process{border-bottom:1px solid #ddd;padding-bottom:10px;}
+.detail .detail-lis .detail-process text{font-size:14px;color:#999;}
+
+
+
+.busDetail{margin-left:20px;position:relative;}
+.busDetail:before{content:"";width:2px;height:100%;background:#ccc;position:absolute;left:-21px;top:0}
+.busDetail:after{content:"";width:14px;height:14px;border-radius: 8px;background:#eee;border:1px solid #bbb;position:absolute;left:-28px;top:50%;transform: translate(0,-50%);}
+
+.busDetail>text{font-size:14px;color:#999;line-height:42px;display:block;}
+.busDetail .busStep{width:100%;padding-bottom:15px;border-bottom:1px solid #ddd}
+.busDetail .busStep .ste-sitename{background:#9ed199;font-size:16px;height:42px;line-height:42px;color:#fff;border-top-left-radius:5px;
+border-top-right-radius:5px;padding-left:10px;}
+.busDetail .busStep .step-wrapper{background:#eef7f2;padding:6px 10px;}
+
+.busDetail .busStep .step-wrapper .site-departure_stop{margin-bottom:6px;}
+
+.busDetail .busStep .step-wrapper .site-departure_stop text:nth-child(1){font-size:15px;font-weight:bold;}
+.busDetail .busStep .step-wrapper .site-departure_stop text:nth-child(2){font-size:12px;background:#5884ef;border-radius: 2px;margin-left:5px;display:inline-block;}
+
+.busDetail .busStep .site-msg{font-size:14px;color:#999;margin:5px 0;}
+
+.busDetail .busStep .sitem-via_stops{font-size:15px;color:#333;}
+
+.busDetail .busStep .step-wrapper .site-arrival_stop{margin:5px 0;}
+.busDetail .busStep .step-wrapper .site-arrival_stop text:nth-child(1){font-size:15px;font-weight:bold;}
+.busDetail .busStep .step-wrapper .site-arrival_stop text:nth-child(2){font-size:12px;background:#ff2f4c;border-radius: 2px;margin-left:5px;}
+
+
+
+

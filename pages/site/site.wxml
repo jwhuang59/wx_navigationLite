@@ -1,0 +1,21 @@
+<!--pages/site/site.wxml-->
+<view class="container">
+  <view class="tips">
+    <text>数据略有偏差，请以实际情况为主</text>
+  </view>
+  <image wx:if="{{siteData.siteimg == ''}}" src="../../image/nophoto.jpg"></image>
+  <image wx:elif="{{siteData.siteimg != ''}}" src="{{siteData.siteimg}}"></image>
+
+  <text class="site-name">{{siteData.endName}}</text>
+  <text class="site-address">{{siteData.siteaddress}}</text>
+
+
+  <navigator hover-class="none" url="../route/route?startName={{siteData.startName}}&startPoint={{siteData.startPoint}}&endName={{siteData.endName}}&endPoint={{siteData.endPoint}}&ways=0" >
+    <button class="goto" bindtap='writeHistory'>去这里</button>
+  </navigator>
+
+  <view class="site-foot">
+    <button class="share" open-type='share' hover-class="none">分享地点给好友</button>
+    <text class="return" bindtap='returnIndex' hover-class="none" plain="ture" loading="ture">返回首页</text>
+  </view>
+</view>

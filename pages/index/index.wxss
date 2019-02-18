@@ -1,0 +1,28 @@
+/* pages/maps.wxss */
+
+
+
+.section{width: 100%;position:absolute;top:20px;}
+
+.text_box{margin: 10px 25px;border-bottom:1px solid #c3c3c3;padding-bottom:10px}
+.container{position: absolute;z-index:-1;top: 0;bottom: 0;left: 0;right: 0;}
+
+.container .wrapper{width:90%;height:40px;margin:20px auto 0;background:#ffffff;border-radius: 5px;border:1px solid #e7e7e7}
+.container .admin{width:30px;height:30px;margin:6px;display:inline-block;float:left;}
+
+.container .input{width:50%;float:left;height:40px;line-height:40px;color:#666;font-size:14px;}
+
+.container .text{width:20%;height:42px;line-height:42px;float:right;text-align:right;font-size:14px;color:#666;padding-right:10px;}
+.container .rest{width:42px;height:42px;border-radius: 50%;position:absolute;bottom:40px;left:30px;background:#fff;border:1px solid #e7e7e7}
+.container .restimg{width:30px;height:30px;margin:6px auto;}
+
+.container .share{width:42px;height:42px;border-radius: 50%;position:absolute;bottom:40px;right:30px;background:#fff;border:1px solid #e7e7e7}
+.container .share button{background-color:transparent;}
+.container .share button::after{border:none;}
+.container .shareimg{width:30px;height:30px;margin:6px auto;}
+
+.container .loadline{width:68px;height:68px;border-radius: 50%;position:absolute;bottom:100px;right:50%;margin-right:-34px;background:#4188fe;}
+.container .loadlineimg{width:32px;height:32px;margin:6px auto 2px;}
+.container .loadlinetext{text-align:center;color:#fff;font-size:16px;}
+
+

@@ -1,0 +1,83 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="place">
+    <view class="place-sec">
+      <text class="origin">{{ getDetail[1].startName }}</text>
+      <image src="../../image/arrow1.png"></image>
+      <text class="destination">{{ getDetail[1].sitename }}</text>
+    </view>
+    <view class="place-row">
+      <text>{{ getDetail[0].duration }} · </text>
+      <text>{{ getDetail[0].distance }}</text>
+    </view>
+  </view>
+
+
+  <view class="detail">
+    <view class="lis-start">
+      <image src="../../image/startpoint0.png"></image>
+      <text class="start-origin">从 {{ getDetail[1].startName }} 出发</text>
+      <text class="start-case">{{ getDetail[1].taxi_cost }}</text>
+      <view class="clear"></view>
+    </view>
+
+    
+
+    <block wx:if="{{showBus}}">
+    
+      <view class="busDetail" wx:for="{{getDetail[0].segments}}" wx:key="index">
+        <text>{{ getDetail[0].segments[index].walkingDistance }}</text>
+
+        <view class="busStep" wx:if="{{ getDetail[0].segments[index].bus.buslines != '' }}">
+
+          <view class="ste-sitename" >
+          {{ getDetail[0].segments[index].bus.buslines[0].name }}
+          </view>
+          
+          <view class="step-wrapper">
+
+            <view class="site-departure_stop">
+              <text>{{ getDetail[0].segments[index].bus.buslines[0].departure_stop.name }}</text>
+              <text>{{ getDetail[0].segments[index].entrance.name }}</text>
+            </view>
+
+            <view class="site-msg">
+              <text>途径{{ getDetail[0].segments[index].bus.buslines[0].via_stops.length }}个站 · </text><text>{{ getDetail[0].segments[index].distance }} · </text><text>{{ getDetail[0].segments[index].duration }}</text>
+            </view>
+
+            <view class="sitem-via_stops">
+              <text wx:for="{{ getDetail[0].segments[index].bus.buslines[0].via_stops }}" wx:key="num" wx:for-index="idx">{{ getDetail[0].segments[index].bus.buslines[0].via_stops[idx].name }} <text wx:if="{{idx < getDetail[0].segments[index].bus.buslines[0].via_stops.length - 1}}"> → </text></text>
+            </view>
+            <view class="site-arrival_stop">
+              <text>{{ getDetail[0].segments[index].bus.buslines[0].arrival_stop.name }}</text>
+              <text>{{ getDetail[0].segments[index].exit.name }}</text>
+            </view>
+
+          </view>
+
+        </view>
+
+        <text>{{ getDetail[0].segments[index].walkingDistance0 }}</text>
+      </view>
+          
+    </block>
+
+    <block wx:else>
+      <view class="detail-lis" wx:for="{{ getDetail[0].steps }}" wx:key="{{index}}">
+        <view class="detail-load">
+          <text>{{ getDetail[0].steps[index].road }}</text>
+        </view>
+
+        <view class="detail-process">
+          <text>{{ getDetail[0].steps[index].instruction }}</text>
+        </view>
+
+      </view>
+    </block>
+
+    <view class="lis-end">
+      <image src="../../image/endpoint0.png"></image>
+      <text class="end-origin">到达 {{ getDetail[1].sitename }}</text>
+    </view>
+  </view>
+</view>

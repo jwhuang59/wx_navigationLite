@@ -1,0 +1,69 @@
+/* pages/navigation/navigation.wxss */
+
+.container{width:100%;height:100%;background:#eee;position:absolute;top:0;bottom:0;left:0;right:0}
+
+.flex{width:100%;display:flex;flex-direction:column;}
+.flex-wrapper{display:flex;flex-direction:row;position:relative;background:#4188fe;}
+.flex-wrapper .goTo{width:75%;margin:10px auto 5px;}
+.flex-wrapper .go,.flex-wrapper .to{height:42px;line-height:42px;display:flex;flex-direction:row-column;background:#699efe;margin-bottom:5px;border-radius: 5px;}
+
+
+.flex-wrapper label{width:18%;font-size:14px;color:#dfdfdf;text-align:center;}
+.flex-wrapper button{width:80%;height:42px;line-height:42px;color:#fff;font-size:15px;border:none;text-align:left;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;background:transparent;padding:0 10px 0 0;margin:0}
+.flex-wrapper button:after{border:none;}
+
+
+
+.flex-wrapper .changePoint{width:24px;height:24px;position:absolute;left:10px;top:50%;margin-top:-12px;}
+.flex-wrapper .submit{width:24px;height:24px;position:absolute;right:10px;top:50%;transform: translate(0,-50%)}
+
+.flex-wrapper .animate{animation:top 0.3s linear;-webkit-animation:top 0.3s linear;}
+@keyframes top{0%{transform:rotate(0deg);}50%{transform:rotate(180deg)}100%{transform:rotate(360deg);}}
+@-webkit-keyframes top{0%{transform:rotate(0deg);}50%{transform:rotate(180deg)}100%{transform:rotate(360deg);}}
+
+
+.flex-menu{width:100%;height:40px;display: flex;background:#4188fe;}
+.flex-item{height: 36px; line-height: 36px;text-align: center;color:#dfdfdf;font-size:14px;flex: 1}
+.flex-item.active{color:#fff;border-bottom:2px solid #fff;}
+
+
+.flex-setUp{width:100%;display:flex;flex-direction: column;background:#fff;}
+.flex-setUp .setUp-item{height:50px;line-height:50px;display: flex;flex-direction: row}
+.flex-setUp .setUp-item image{width:18px;height:18px;margin:16px 8px;}
+.flex-setUp .setUp-item .item{border-bottom:1px solid #eee;flex:1}
+.flex-setUp .setUp-item .item label{font-size:15px;color:#333;}
+.flex-setUp .setUp-item .item text{font-size:14px;color:#999;margin-left:6px;}
+
+.flex-setUp .setUp-item .company{border:0}
+
+.share{width:100%;background:#fff;height:50px;line-height:50px;display:flex;flex-direction: row;margin:5px 0;padding:0;}
+
+.share image{width:22px;height:22px;margin:14px 6px;}
+.share label{font-size:15px;color:#333;}
+.share text{font-size:13px;color:#999;margin-left:6px;}
+
+
+
+.history-wrapper{background:#fff;}
+.hasHistory .history-place{display:flex;flex-direction:row-column;padding-top:15px;position:relative;}
+.hasHistory .before-icon{width:18px;height:18px;position:absolute;top:50%;left:8px;transform: translate(0,-50%)}
+
+.placeName{flex:1;border-bottom:1px solid #eee;vertical-align: top;padding:0 36px 15px 0;margin-left:34px;}
+.placeName text{font-size:15px;color:#666;}
+.placeName image{width:18px;height:18px;margin:0 5px;vertical-align: middle;}
+
+.hasHistory .icon-route{width:20px;height:20px;position:absolute;top:50%;right:8px;transform: translate(0,-50%)}
+
+
+
+.empty-history{height:50px;line-height:50px;font-size:15px;color:#999;text-align:center;}
+
+
+.flex .tips{padding:50px 0 10px 0;font-size:13px;color:#ddd;text-align:center;background:#eee}
+
+.flex .noHistory{width:100%;height:50px;line-height:50px;background:#fff;display:flex;flex-direction: row}
+.flex .noHistory image{width:18px;height:18px;margin:16px 8px;}
+.flex .noHistory text{line-height:50px;font-size:15px;color:#999;text-align:center;}
+
+
+

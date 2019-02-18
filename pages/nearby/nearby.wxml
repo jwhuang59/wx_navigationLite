@@ -1,0 +1,41 @@
+<!--pages/near/near.wxml-->
+<view class="container">
+  <view class="flex" id="wrapper">
+      <view class="wrapper-search">
+        <text>在</text>
+        <button class="location" hover-class='none' bindtap='updatePoint'>{{siteName}}</button>
+        <text>中心附近搜索</text>
+      </view>
+   
+      <view class="near-menu">
+        <view class="near-lis" wx:for="{{tips}}" wx:key="index" >
+        <navigator hover-class="none" url="../site/site?endName= {{tips[index].name}}&siteimg={{tips[index].photos[0].url}}&siteaddress={{tips[index].cityname}}{{tips[index].adname}}{{tips[index].address}}&startName={{siteName}}&startPoint={{point}}&endPoint={{tips[index].location}}" >
+          <image class="near-img" wx:if="{{ tips[index].photos != '' }}" src="{{tips[index].photos[0].url}}"></image>
+          <image class="near-img" wx:elif="{{ tips[index].photos == '' }}" src="../../image/nophoto.jpg"></image>
+
+          <view class="near-msg">
+            <text class="name">{{tips[index].name}}</text>
+            <text class="address">{{tips[index].cityname}}{{tips[index].adname}}{{tips[index].address}}</text>
+            <view class="distance">
+              <text>距</text>
+              <label>我的位置</label>
+              <text>{{tips[index].distance}}m</text>
+            </view>
+            <text class="rating" wx:if="{{ tips[index].biz_ext.rating != '' }}">{{tips[index].biz_ext.rating}}分</text>
+            <text class="rating" wx:elif="{{ tips[index].biz_ext.rating == '' }}">暂无评分</text>
+            <text class="tel">{{tips[index].tel}}</text>
+          </view>
+        </navigator>
+          <view class="near-goto">
+            <image src="../../image/goto.png"></image>
+            <text class="goto">去这里</text>
+          </view>
+
+        </view>
+      </view>
+      <view class="toBottom" wx:if="{{toBottom}}">—— 我是有底线的 ——</view>
+  </view>
+
+</view>
+
+

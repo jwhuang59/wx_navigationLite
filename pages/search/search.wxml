@@ -1,0 +1,89 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+    <view class="flex">
+        <view class="wrapper-search">
+          <input placeholder="在”我的位置“附近搜索" class="search" bindinput="bindInput" />
+
+          <text bindtap='bindSubmit'>搜索</text>
+
+        </view>
+
+        <view class="wrapper-menu">
+          <view class="wrapper-lis" wx:for="{{tips}}" wx:key="index">
+            <navigator hover-class="none" url="../site/site?endName= {{tips[index].name}}&siteimg={{tips[index].photos[0].url}}&siteaddress={{tips[index].cityname}}{{tips[index].adname}}{{tips[index].address}}&endPoint={{tips[index].location.longitude}},{{tips[index].location.latitude}}&startPoint={{location}}&startName=我的位置" >
+              <view class="map-msg" >
+                <text class="name">{{tips[index].name}}</text>
+                <text class="address">{{tips[index].cityname}}{{tips[index].adname}}{{tips[index].address}}</text>
+                <text class="distance">{{tips[index].distance}}m</text>
+              </view>
+            </navigator>
+            <view class="map-goto">
+              <image src="../../image/goto.png"></image>
+              <text class="goto">去这里</text>
+            </view>
+          </view>
+        </view>
+        <block wx:if="{{ hasInput }}">
+          <view class="flex-content">
+
+            <view class="jump-menu">
+              <view class="jump-wrapper" wx:for="{{menu}}" wx:key="index" wx:for-item="i">
+                <navigator hover-class="none" url="../nearby/nearby?keywords= {{ i.nameCn }}" >
+                  <view class="jump-lis">
+                    <image src="../../image/{{i.nameEn}}.jpg"></image>
+                    <text>{{i.nameCn}}</text>
+                  </view>
+                </navigator>
+              </view>
+            </view>
+
+              <button open-type='share' class="share" >
+                <image src="../../image/share.png"></image>
+                <label>分享</label>
+                <text>把导航lite分享给好友</text>
+              </button>
+
+            <view wx:if="{{ hasHistory != '' }}" class="history-wrapper">
+              <view class="hasHistory"  wx:for="{{historyData}}" wx:key="{{index}}" wx:for-item="item">
+                <navigator wx:if="{{historyData[index].name}}" hover-class="none" url="../site/site?endName= {{historyData[index].name}}&siteimg={{historyData[index].img}}&siteaddress={{historyData[index].address}}&endPoint={{historyData[index].endPoint}}&startPoint={{historyData[index].startPoint}}&startName=我的位置">
+                  <view class="history-place" >
+                    <image src="../../image/lishi.png" class="before-icon"></image>
+                    <view class="place-left">
+                      <text>{{historyData[index].name}}</text>
+                      <text>{{historyData[index].address}}</text>
+                    </view>
+                    <view class="place-right">
+                      <image src="../../image/goto.png"></image>
+                      <text>去这里</text>
+                    </view>
+                  </view>
+                </navigator>
+                <navigator hover-class="none" url="../nearby/nearby?keywords={{ historyData[index] }}" wx:else>
+                  <view class="history-area">
+                    <image src="../../image/lishi.png" class="before-icon"></image>
+                    <view class="area-left">
+                      <text>{{ historyData[index] }}</text>
+                    </view>
+                    <view class="area-right">
+                      <image src="../../image/fangda.png"></image>
+                    </view>
+                  </view>
+                </navigator>
+
+              </view>
+              <view class="empty-history" bindtap='emptyHistory'>
+                清空历史纪录
+              </view>
+            </view>
+
+            <view class="noHistory" wx:else>
+              <image src="../../image/gantan.png"></image>
+              <text>无历史纪录</text>
+            </view>
+
+            <view class="tips">数据来源，高德地图开放平台，腾讯地图开放平台</view>
+          </view>
+        </block>
+
+    </view>
+</view>

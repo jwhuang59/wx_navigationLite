@@ -1,0 +1,44 @@
+<!--pages/maps.wxml-->
+
+
+<!-- <view class="section">
+  <view class="wrapper">
+      <input bindinput="bindInput" placeholder="搜索地点，公交，地铁" />
+    </navigator>
+    <text>{{weatherInfo.temperature}}℃ , {{weatherInfo.weather}}</text>
+  </view>
+</view>
+<view bindtouchstart="bindSearch" data-keywords="{{i.name}}" class="text_box" wx:for="{{tips}}" wx:for-item="i">
+  {{i.name}}
+</view> -->
+
+<view class="container">
+  <map id="myMap" style="width: 100%; height: 100%;" scale="16" latitude="{{mapMsg.latitude}}" longitude="{{mapMsg.longitude}}" iconPath="../../image/location.png" show-location >
+
+  <cover-view class="wrapper">
+      <cover-image src='../../image/admin.png' class='admin' bindtap="toAdmin"></cover-image>
+      <cover-view class="input" bindtap="bindSearch">搜索地点，公交，地铁</cover-view>
+    
+    <cover-view class="text">{{weatherMsg.temperature}}° {{weatherMsg.weather}} </cover-view>
+  </cover-view>
+  
+  <cover-view class="rest" bindtap="toLocation">
+    <cover-image src='../../image/rest.png' class='restimg'></cover-image>
+  </cover-view>
+
+  <cover-view class="share" >
+    <button open-type="share">
+      <cover-image src='../../image/flower.png' class='shareimg'></cover-image>
+    </button>
+  </cover-view>
+
+  <cover-view class="loadline" bindtap="toLoadline">
+      <cover-image src='../../image/loadline.png' class='loadlineimg'></cover-image>
+      <cover-view class="loadlinetext">路线</cover-view>
+  </cover-view>
+
+
+
+  </map>
+</view>
+
