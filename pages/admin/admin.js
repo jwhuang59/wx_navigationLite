@@ -54,17 +54,6 @@ Page({
     })
 
   },
-  otherWxApp: function(){
-    wx.navigateToMiniProgram({
-      appId: 'wxbbec65de8931cc38', // 要跳转的小程序的appid
-      path: 'pages/index/index', // 跳转的目标页面
-      success(res) {
-        // 打开成功  
-      }
-    }) 
-
-  },
-  
 
   /**
    * 生命周期函数--监听页面初次渲染完成
