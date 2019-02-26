@@ -27,11 +27,11 @@
           </view>
         </navigator>
         <navigator hover-class="none" url="../route/route?startName={{siteName}}&startPoint={{point}}&endName= {{tips[index].name}}&endPoint={{tips[index].location}}&ways=0" >
-            <view class="near-goto">
+            <view class="near-goto" bindtap='writeHistory' data-num="{{index}}">
               <image src="../../image/goto.png"></image>
               <text class="goto">去这里</text>
             </view>
-          </navigator>
+        </navigator>
 
         </view>
       </view>
