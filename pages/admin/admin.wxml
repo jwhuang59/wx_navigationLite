@@ -41,12 +41,16 @@
       <label>意见反馈</label>
     </button>
 
+    
     <text class="title">小程序推荐</text>
-
-    <button class="lis" bindtap='otherWxApp'>
-      <label>戏子博客</label>
-      <text>个人博客小程序</text>
-    </button>
+    
+    
+    <navigator target="miniProgram" open-type="navigate" app-id="wxbbec65de8931cc38" path="pages/index/index" version="release">
+      <button class="lis">
+        <label>戏子博客</label>
+        <text>个人博客小程序</text>
+      </button>
+    </navigator>
   </view>
 </view>
 
