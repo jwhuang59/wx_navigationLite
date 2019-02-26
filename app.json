@@ -20,5 +20,8 @@
     "navigationBarBackgroundColor": "#4188fe",
     "navigationBarTitleText": "导航lite",
     "navigationBarTextStyle": "white"
-  }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxbbec65de8931cc38"
+  ]
 }
