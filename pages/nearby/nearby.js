@@ -77,6 +77,7 @@ Page({
             page: that.data.page + 1
 
           })
+          console.log(loadData)
         }else{
           that.setData({
             toBottom:true
@@ -124,10 +125,44 @@ Page({
 
         })
         
-        console.log(that.data.tips)
       }
     })
 
+  },
+  writeHistory:function(res){
+    var _num = res.currentTarget.dataset.num
+    var writeData = (this.data.tips)[_num]
+    var endImg = writeData.photos == "" ? "" : writeData.photos[0].url
+    if (appData.history != '') {
+      var part = [];
+
+      for (let i = 0; i < appData.history.length; i++) {
+
+        part.push(appData.history[i].endPoint)
+        
+      }
+      if (part.indexOf(writeData.location) === -1) {
+        
+        appData.history.unshift({
+          name: writeData.name,
+          img: endImg,
+          address: writeData.cityname + writeData.adname + writeData.address,
+          startPoint: this.data.point,
+          endPoint: writeData.location
+        })
+
+      }
+
+    } else {
+      appData.history.unshift({
+        name: writeData.name,
+        img: endImg,
+        address: writeData.cityname + writeData.adname + writeData.address,
+        startPoint: this.data.point,
+        endPoint: writeData.location
+      })
+
+    }
   },
 
   /**
